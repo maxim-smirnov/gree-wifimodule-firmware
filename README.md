@@ -16,6 +16,10 @@ Inside each folder you'll find firmwares.
 From an old version of Android mobile application hardcoded
 **firmwareCode** were extracted.
 
+Using theese codes you can continue to
+`https://{GREE_SERVER}/wifiModule/Lastversion?firmwareCode=`
+and get a firmware download link.
+
 There can be different updates for different regions.
 Known servers:
 ```
@@ -28,10 +32,6 @@ eu.grih.gree.com
 in.grih.gree.com
 sa.grih.gree.com
 ```
-
-Using theese codes you can continue to
-`https://grih.gree.com/wifiModule/Lastversion?firmwareCode=`
-and get a firmware download link.
 
 ### Example
 ```sh
