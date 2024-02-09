@@ -12,7 +12,7 @@ Inside each folder you'll find firmwares.
 ### Xtensa
 - 36200100812
 
-## How to theese firmwares were got
+## How theese firmwares were got
 From an old version of Android mobile application hardcoded
 **firmwareCode** were extracted.
 
