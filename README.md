@@ -9,21 +9,24 @@ Inside each folder you'll find firmwares.
 ### ARMv8
 - 36300000257
 
+### Armv7E-M
+- 362001060200
+- 362001060297
+- 362001060498 (MTK7682)
+- 362001060499
+
 ### Xtensa
 - 36200100812
 
 ### Unknown
 - 362001000835
-- 362001060200
-- 362001060297
-- 362001060499
 
 ## How theese firmwares were got
 From an old version of Android mobile application hardcoded
 **firmwareCode** were extracted.
 
 Using theese codes you can continue to
-`https://{GREE_SERVER}/wifiModule/Lastversion?firmwareCode=`
+`http://{GREE_SERVER}/wifiModule/Lastversion?firmwareCode=`
 and get a firmware download link.
 
 There can be different updates for different regions.
