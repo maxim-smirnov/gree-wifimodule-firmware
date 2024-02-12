@@ -6,7 +6,7 @@ Inside each folder you'll find firmwares.
 
 ## Known modules architechtures
 
-### ARMv8
+### Armv8
 - 36300000257
 
 ### Armv7E-M
