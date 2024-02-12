@@ -13,8 +13,9 @@ Inside each folder you'll find firmwares.
 - 36200100812
 
 ### Unknown
-- 362001060297
 - 362001000835
+- 362001060200
+- 362001060297
 
 ## How theese firmwares were got
 From an old version of Android mobile application hardcoded
