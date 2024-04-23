@@ -1,0 +1,13 @@
+`http://grih.gree.com/wifiModule/Lastversion?firmwareCode=362001065232`
+
+```json
+{
+  "CreateDate": "2022-05-10 03:29:48",
+  "commProtVer": "",
+  "desc": "\u8bbe\u5907\u54c1\u7c7b\uff1a\u751f\u6d3b\u7535\u5668mqtt 3\u671f\u901a\u7528\u56fa\u4ef6\r\n\u5347\u7ea7\u539f\u56e0\uff1a\u5347\u7ea7\u81f3\u6700\u65b0\u9001\u6d4b\u7248\u672c\r\n\u8d1f\u8d23\u4eba\uff1a\u664f\u7ae0\u7ae0",
+  "forcedUpgrade": 0,
+  "r": 200,
+  "url": "http://test.grih.gree.com/wifiModule/image/15851/1342496",
+  "ver": "1.07"
+}
+```
