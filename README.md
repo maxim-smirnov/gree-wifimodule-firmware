@@ -19,6 +19,7 @@ Inside each folder you'll find firmwares.
 
 ### Xtensa
 - 36200100812
+- 362001065232 (ESP32)
 
 ### Unknown
 - 362001000835
