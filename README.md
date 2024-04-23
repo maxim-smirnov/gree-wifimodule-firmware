@@ -8,6 +8,7 @@ Inside each folder you'll find firmwares.
 
 ### Armv8
 - 36300000257
+- 362001063066 (RK3308)
 
 ### Armv7E-M
 - 362001060200
