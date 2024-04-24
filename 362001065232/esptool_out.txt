@@ -1,0 +1,47 @@
+```
+esptool.py v4.7.0
+File size: 1342496 (bytes)
+Detected image type: ESP32-C3
+
+ESP32-C3 image header
+=====================
+Image version: 1
+Entry point: 0x403803e8
+Segments: 6
+Flash size: 4MB
+Flash freq: 40m
+Flash mode: DIO
+
+ESP32-C3 extended image header
+==============================
+WP pin: 0xee (disabled)
+Flash pins drive settings: clk_drv: 0x0, q_drv: 0x0, d_drv: 0x0, cs0_drv: 0x0, hd_drv: 0x0, wp_drv: 0x0
+Chip ID: 5 (ESP32-C3)
+Minimal chip revision: v0.0, (legacy min_rev = 3)
+Maximal chip revision: v0.0
+
+Segments information
+====================
+Segment   Length   Load addr   File offs  Memory types
+-------  -------  ----------  ----------  ------------
+      1  0x34b94  0x3c100020  0x00000018  DROM
+      2  0x03eb8  0x3fc8fe00  0x00034bb4  DRAM, BYTE_ACCESSIBLE
+      3  0x0759c  0x40380000  0x00038a74  IRAM
+      4  0xff500  0x42000020  0x00040018  IROM
+      5  0x086b4  0x4038759c  0x0013f520  IRAM
+      6  0x00010  0x50000000  0x00147bdc  RTC_IRAM, RTC_DRAM
+
+ESP32-C3 image footer
+=====================
+Checksum: 0xa4 (valid)
+Validation hash: f64fd09bc0f0422111da2965618f4d6460653d4c59a9277ff89f449ddeaf3d24 (valid)
+
+Application information
+=======================
+Project name: refactor
+App version: V1.06-13-gabdc8d2
+Compile time: May 10 2022 11:14:57
+ELF file SHA256: 74d75650b29e2b5b47ac6f49f459961fe8e23b230535e7cc0ceb3b1948d77738
+ESP-IDF: v4.3.1
+Secure version: 0
+```
