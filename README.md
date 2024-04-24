@@ -19,7 +19,9 @@ Inside each folder you'll find firmwares.
 
 ### Xtensa
 - 36200100812
-- 362001065232 (ESP32)
+
+### RISC-V 32bit
+- 362001065232 (ESP32C3)
 
 ### Unknown
 - 362001000835
