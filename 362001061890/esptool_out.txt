@@ -1,0 +1,47 @@
+```
+esptool.py v4.7.0
+File size: 1076048 (bytes)
+Detected image type: ESP32
+
+ESP32 image header
+==================
+Image version: 1
+Entry point: 0x4008140c
+Segments: 6
+Flash size: 4MB
+Flash freq: 80m
+Flash mode: DIO
+
+ESP32 extended image header
+===========================
+WP pin: 0xee (disabled)
+Flash pins drive settings: clk_drv: 0x0, q_drv: 0x0, d_drv: 0x0, cs0_drv: 0x0, hd_drv: 0x0, wp_drv: 0x0
+Chip ID: 0 (ESP32)
+Minimal chip revision: v0.0, (legacy min_rev = 2)
+Maximal chip revision: v0.0
+
+Segments information
+====================
+Segment   Length   Load addr   File offs  Memory types
+-------  -------  ----------  ----------  ------------
+      1  0x3242c  0x3f400020  0x00000018  DROM
+      2  0x0407c  0x3ffbdb60  0x0003244c  BYTE_ACCESSIBLE, DRAM
+      3  0x00400  0x40080000  0x000364d0  IRAM
+      4  0x09730  0x40080400  0x000368d8  IRAM
+      5  0xb5604  0x400d0018  0x00040010  IROM
+      6  0x114fc  0x40089b30  0x000f561c  IRAM
+
+ESP32 image footer
+==================
+Checksum: 0x47 (valid)
+Validation hash: b67e8bb4322104f358e605588b535eea8aaec35db5fe44b7dcf2aedf95d83240 (valid)
+
+Application information
+=======================
+Project name: refactor_bai-200521
+App version: 3ab5ad7-dirty
+Compile time: Sep  7 2020 10:53:22
+ELF file SHA256: 7c6f551acf99a73ad3fa0952d8330ba25687695b1f772194cd0308f672a1934d
+ESP-IDF: v3.3.2-26-g1ba3bf2-dirty
+Secure version: 0
+```
