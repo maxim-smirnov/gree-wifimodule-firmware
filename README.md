@@ -40,6 +40,7 @@ Known servers:
 ```
 grih.gree.com
 test.grih.gree.com
+kfgrih.gree.com
 ru.grih.gree.com
 na.grih.gree.com
 hk.grih.gree.com
