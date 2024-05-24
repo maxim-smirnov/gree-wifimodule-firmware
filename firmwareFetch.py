@@ -44,6 +44,7 @@ if __name__ == "__main__":
     firmware_code = sys.argv[1]
     servers = [
         "grih.gree.com",
+        "kfgrih.gree.com",
         "test.grih.gree.com",
         "ru.grih.gree.com",
         "na.grih.gree.com",
