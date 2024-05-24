@@ -27,7 +27,7 @@ def fetch_and_save_data(firmware_code, server):
             file.write(f"`{url}`\n\n")
             file.write(f"```json\n")
             json.dump(data, file, indent=2)
-            file.write(f"```")
+            file.write(f"\n```")
 
         print(f"Data saved for firmware code {firmware_code} from {server}")
 
