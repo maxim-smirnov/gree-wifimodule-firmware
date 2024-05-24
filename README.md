@@ -27,6 +27,48 @@ Inside each folder you'll find firmwares.
 ### Unknown
 - 362001000835
 
+## Fetch metadata for your `firmwareCode`
+
+Create python virtual environment, install `requests` module with `pip`:
+
+```sh
+~/ python3 -m vev .venv
+~/ source .venv/bin/activvate
+~/ pip install requests
+```
+
+Now you'll be able to run the script:
+
+```sh
+~/ python firmwareFetch.py
+Usage: python script.py <firmware_code>
+```
+
+The script will create `downloaded` folder and place `.md` docs under it for each `*grih.gree.com` server.
+Here is an example:
+
+```sh
+~/ python firmwareFetch.py 362001065279
+Ignore firmware code 362001065279 from grih.gree.com due to response status 405
+Data saved for firmware code 362001065279 from tmp.grih.gree.com
+Data saved for firmware code 362001065279 from kfgrih.gree.com
+Data saved for firmware code 362001065279 from test.grih.gree.com
+Error fetching data for firmware code 362001065279 from ru.grih.gree.com: 404 Client Error: Not Found for url: http://ru.grih.gree.com/wifiModule/Lastversion?firmwareCode=362001065279
+Ignore firmware code 362001065279 from na.grih.gree.com due to response status 405
+Ignore firmware code 362001065279 from hk.grih.gree.com due to response status 405
+Ignore firmware code 362001065279 from eu.grih.gree.com due to response status 405
+Ignore firmware code 362001065279 from in.grih.gree.com due to response status 405
+Ignore firmware code 362001065279 from sa.grih.gree.com due to response status 405
+~/ ls ./downloaded
+362001065279_v1.22_kfgrih.gree.com.md    362001065279_v1.22_test.grih.gree.com.md 362001065279_v1.22_tmp.grih.gree.com.md
+```
+
+When you're done, deactivate your python virtual environment.
+
+```sh
+~/ deactivate
+```
+
 ## How theese firmwares were got
 From an old version of Android mobile application hardcoded
 **firmwareCode** were extracted.
