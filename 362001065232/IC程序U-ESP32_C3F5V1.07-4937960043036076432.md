@@ -1,4 +1,4 @@
-`http://grih.gree.com/wifiModule/Lastversion?firmwareCode=362001065232`
+`http://test.grih.gree.com/wifiModule/Lastversion?firmwareCode=362001065232`
 
 ```json
 {
