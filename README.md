@@ -39,6 +39,7 @@ There can be different updates for different regions.
 Known servers:
 ```
 grih.gree.com
+tmp.grih.gree.com
 test.grih.gree.com
 kfgrih.gree.com
 ru.grih.gree.com
