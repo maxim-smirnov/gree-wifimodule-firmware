@@ -16,6 +16,7 @@ Inside each folder you'll find firmwares.
 - 362001060498 (MTK7682)
 - 362001060499
 - 362001065279 (RTL8720CF)
+- 362001065280 (RTL8710C)
 
 ### Xtensa
 - 36200100812
@@ -26,6 +27,7 @@ Inside each folder you'll find firmwares.
 
 ### Unknown
 - 362001000835
+- 362001062107
 
 ## Fetch metadata for your `firmwareCode`
 
