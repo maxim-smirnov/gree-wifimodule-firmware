@@ -41,24 +41,31 @@ def fetch_and_save_data(firmware_code, server):
 
 
 def fetch_firmware(firmware_code, filename, data):
-    print(f'Downloading {firmware_code} from {data["url"]}')
-    resp = requests.get(data['url'])
-    fname = resp.headers['Content-Disposition'].replace('attachment; filename="', "")[:-1]
-    tmp_bin = os.path.join("downloaded", fname)
-    with open(tmp_bin, 'wb') as f:
-        print(f'Recieved {fname}')
-        f.write(resp.content)
+    print(f'\nDownloading {firmware_code} from {data["url"]}')
+    resp = requests.head(data['url'])
 
-    print(f"Wrote {tmp_bin}")
+    fname = resp.headers['Content-Disposition'].replace('attachment; filename="', "")[:-1]
+
     target_bin = os.path.join(firmware_code, fname)
     if os.path.exists(target_bin):
         print(f'File {target_bin} already exists - skipping')
         return
 
-    print(f'Renaming {tmp_bin} to {target_bin}')
-    os.rename(tmp_bin, target_bin)
-    print(f'Renaming {filename} to {target_bin.replace(".bin", ".md")}')
-    os.rename(filename, target_bin.replace(".bin", ".md"))
+    print(f'Downloading {target_bin} from {data["url"]}')
+    with requests.get(data['url'], stream = True) as resp:
+        resp.raise_for_status()
+
+        with open(target_bin, 'wb') as f:
+            for chunk in resp.iter_content(chunk_size=64*1024):
+                print(".", end="")
+                f.write(chunk)
+            print(" done")
+
+    print(f"Wrote {target_bin}")
+
+    target_md = os.path.splitext(target_bin)[0]+".md"
+    print(f'Renaming {filename} to {target_md}\n')
+    os.rename(filename, target_md)
 
 
 if __name__ == "__main__":
