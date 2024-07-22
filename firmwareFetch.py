@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import sys
 import json
@@ -30,11 +32,41 @@ def fetch_and_save_data(firmware_code, server):
             file.write(f"\n```")
 
         print(f"Data saved for firmware code {firmware_code} from {server}")
+        return firmware_code, filename, data
 
     except requests.RequestException as e:
         print(f"Error fetching data for firmware code {firmware_code} from {server}: {str(e)}")
     except json.JSONDecodeError as e:
         print(f"Error decoding JSON response for firmware code {firmware_code} from {server}: {str(e)}")
+
+
+def fetch_firmware(firmware_code, filename, data):
+    print(f'\nDownloading {firmware_code} from {data["url"]}')
+    resp = requests.head(data['url'])
+
+    fname = resp.headers['Content-Disposition'].replace('attachment; filename="', "")[:-1]
+
+    target_bin = os.path.join(firmware_code, fname)
+    if os.path.exists(target_bin):
+        print(f'File {target_bin} already exists - skipping')
+        return
+
+    print(f'Downloading {target_bin} from {data["url"]}')
+    with requests.get(data['url'], stream = True) as resp:
+        resp.raise_for_status()
+
+        with open(target_bin, 'wb') as f:
+            for chunk in resp.iter_content(chunk_size=64*1024):
+                print(".", end="")
+                f.write(chunk)
+            print(" done")
+
+    print(f"Wrote {target_bin}")
+
+    target_md = os.path.splitext(target_bin)[0]+".md"
+    print(f'Renaming {filename} to {target_md}\n')
+    os.rename(filename, target_md)
+
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
@@ -59,4 +91,5 @@ if __name__ == "__main__":
     os.makedirs("downloaded", exist_ok=True)
 
     for server in servers:
-        fetch_and_save_data(firmware_code, server)
+        res = fetch_and_save_data(firmware_code, server)
+        if res: fetch_firmware(*res)
