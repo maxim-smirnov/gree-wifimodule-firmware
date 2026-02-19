@@ -36,7 +36,7 @@ Create python virtual environment, install `requests` module with `pip`:
 
 ```sh
 ~/ python3 -m vev .venv
-~/ source .venv/bin/activvate
+~/ source .venv/bin/activate
 ~/ pip install requests
 ```
 
